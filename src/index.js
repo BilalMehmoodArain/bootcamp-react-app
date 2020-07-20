@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function Hi(props){
+  return <div>
+            Hello {props.firstname}{props.lastname}!
+            <strong>Bilal Mehmood</strong>
+            {5+10}
+            <h1>Chaska Point offers:</h1>
+            <ul>
+              <li>Coffee</li>
+              <li>Milk</li>
+              <li>Tea</li>
+            </ul>
+            <ol>
+              <li>Coffee</li>
+              <li>Milk</li>
+              <li>Tea</li>
+            </ol>
+            <App />
+         </div>
+          
+}
+ReactDOM.render(<Hi firstname="Bilal" lastname="Mehmood"/>, document.querySelector('#root'));
